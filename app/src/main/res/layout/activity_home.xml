@@ -223,6 +223,6 @@
         android:layout_gravity="center"
         android:visibility="gone"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+        ads:adUnitId="@string/banner_ad_unit_id"/>
 
 </LinearLayout>
