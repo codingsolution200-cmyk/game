@@ -178,6 +178,23 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"/>
 
+        <TextView
+            android:id="@+id/tvPrivacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy"
+            android:textSize="14sp"
+            android:fontFamily="@font/baloo2"
+            android:textColor="#9EDCFF"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            android:background="@drawable/tab_bg"
+            android:alpha="0.0"
+            app:layout_constraintBottom_toTopOf="@id/tvVersion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="10dp"/>
+
         <!-- Version tag at bottom -->
         <TextView
             android:id="@+id/tvVersion"

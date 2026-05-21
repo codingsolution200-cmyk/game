@@ -25,6 +25,7 @@ import com.example.game.presentation.ui.ads.AdManager
 import com.example.game.presentation.ui.ads.BannerAdController
 import com.example.game.presentation.ui.ads.NetworkUtils
 import com.example.game.presentation.ui.computer.ComputerGameActivity
+import com.example.game.presentation.ui.legal.LegalLinks
 import com.example.game.presentation.ui.online.OnlineMenuActivity
 import com.example.game.presentation.ui.rules.RulesActivity
 import com.example.game.presentation.ui.settings.SettingsActivity
@@ -320,6 +321,7 @@ class HomeActivity : AppCompatActivity() {
         val btnOnline = findViewById<View>(R.id.btnOnlineGame)
         val btnRules = findViewById<View>(R.id.btnRules)
         val btnSettings = findViewById<View>(R.id.btnSettings)
+        val tvPrivacy = findViewById<View>(R.id.tvPrivacyPolicy)
         val tvVersion = findViewById<View>(R.id.tvVersion)
 
         tvTitle.translationY = -80f
@@ -357,7 +359,8 @@ class HomeActivity : AppCompatActivity() {
         slideUpFade(btnComputer, startDelay = 650).start()
         slideUpFade(btnOnline, startDelay = 700).start()
         slideUpFade(btnRules, startDelay = 820).start()
-        slideUpFade(tvVersion, startDelay = 950).start()
+        slideUpFade(tvPrivacy, startDelay = 910).start()
+        slideUpFade(tvVersion, startDelay = 980).start()
     }
 
     private fun slideUpFade(view: View, startDelay: Long): AnimatorSet {
@@ -426,6 +429,9 @@ class HomeActivity : AppCompatActivity() {
         }
         findViewById<View>(R.id.btnRules).setOnClickListener {
             openWithAd(Intent(this, RulesActivity::class.java))
+        }
+        findViewById<View>(R.id.tvPrivacyPolicy).setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(LegalLinks.PRIVACY_POLICY_URL)))
         }
         btnSettings.setOnClickListener {
             openWithAd(Intent(this, SettingsActivity::class.java))

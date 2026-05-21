@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.game.R
 import com.example.game.presentation.ui.FullscreenUtils
 import com.example.game.presentation.ui.ads.AdManager
+import com.example.game.presentation.ui.legal.LegalLinks
 import com.example.game.presentation.ui.legal.LegalActivity
 
 class SettingsActivity : AppCompatActivity() {
@@ -61,6 +62,10 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         findViewById<android.view.View>(R.id.tvLegal).setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse(LegalLinks.PRIVACY_POLICY_URL)))
+        }
+
+        findViewById<android.view.View>(R.id.tvLegalInApp).setOnClickListener {
             startActivity(Intent(this, LegalActivity::class.java))
         }
 
