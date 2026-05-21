@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@android:drawable/ic_media_previous"
+        android:background="@android:color/transparent"
+        android:tint="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Online Game"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/baloo2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Online Icon -->
+    <TextView
+        android:id="@+id/tvIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🌐"
+        android:textSize="80sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <!-- Create Room Button -->
+    <Button
+        android:id="@+id/btnCreateRoom"
+        android:layout_width="260dp"
+        android:layout_height="56dp"
+        android:text="Create Room"
+        android:textSize="18sp"
+        android:fontFamily="@font/baloo2"
+        android:textColor="#1A1A35"
+        android:background="@drawable/btn_gold"
+        app:layout_constraintTop_toBottomOf="@id/tvIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"/>
+
+    <!-- Join Room Button -->
+    <Button
+        android:id="@+id/btnJoinRoom"
+        android:layout_width="260dp"
+        android:layout_height="56dp"
+        android:text="Join Room"
+        android:textSize="18sp"
+        android:fontFamily="@font/baloo2"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btn_primary"
+        app:layout_constraintTop_toBottomOf="@id/btnCreateRoom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

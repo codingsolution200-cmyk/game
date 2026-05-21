@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@android:drawable/ic_media_previous"
+        android:background="@android:color/transparent"
+        android:tint="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Join Room"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/baloo2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Icon -->
+    <TextView
+        android:id="@+id/tvIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔑"
+        android:textSize="72sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Room Code Label -->
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Room Code"
+        android:textSize="16sp"
+        android:fontFamily="@font/baloo2"
+        android:textColor="#B0B0CC"
+        app:layout_constraintTop_toBottomOf="@id/tvIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Room Code Input -->
+    <EditText
+        android:id="@+id/etRoomCode"
+        android:layout_width="260dp"
+        android:layout_height="56dp"
+        android:hint="e.g. ABC123"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/baloo2"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#555577"
+        android:gravity="center"
+        android:inputType="textCapCharacters"
+        android:maxLength="6"
+        android:background="@drawable/bg_card"
+        android:padding="12dp"
+        android:letterSpacing="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tvLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <!-- ✅ Player Name Label — NEW -->
+    <TextView
+        android:id="@+id/tvNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your name"
+        android:textSize="16sp"
+        android:fontFamily="@font/baloo2"
+        android:textColor="#B0B0CC"
+        app:layout_constraintBottom_toTopOf="@id/etPlayerName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- ✅ Player Name Input — NEW -->
+    <EditText
+        android:id="@+id/etPlayerName"
+        android:layout_width="260dp"
+        android:layout_height="56dp"
+        android:hint="e.g. xyz"
+        android:textSize="16sp"
+        android:fontFamily="@font/baloo2"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#555577"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:maxLength="15"
+        android:background="@drawable/bg_card"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@id/btnJoin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Join Button -->
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="260dp"
+        android:layout_height="56dp"
+        android:text="Join Game"
+        android:textSize="18sp"
+        android:fontFamily="@font/baloo2"
+        android:textColor="#1A1A35"
+        android:background="@drawable/btn_gold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="60dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

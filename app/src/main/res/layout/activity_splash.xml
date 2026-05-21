@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1117">
+
+    <!-- ══ Background gradient ══ -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_bg_gradient"/>
+
+    <!-- ══ TOP glow circles ══ -->
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-60dp"
+        android:layout_marginEnd="-60dp"
+        android:background="@drawable/splash_glow_circle"
+        android:alpha="0.15"/>
+
+    <View
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="-50dp"
+        android:background="@drawable/splash_glow_circle"
+        android:alpha="0.08"/>
+
+    <!-- ══ CENTER CONTENT ══ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="40dp">
+
+        <!-- Emoji row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🐍"
+                android:textSize="52sp"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎲"
+                android:textSize="52sp"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🪜"
+                android:textSize="52sp"/>
+
+        </LinearLayout>
+
+        <!-- Decorative line -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:background="#6366F1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  ✦  "
+                android:textColor="#6366F1"
+                android:textSize="12sp"/>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:background="#6366F1"/>
+
+        </LinearLayout>
+
+        <!-- App Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SapSidi"
+            android:textColor="#FFFFFF"
+            android:textSize="52sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Tagline 1 — SNAKE & LADDER -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SNAKE &amp; LADDER"
+            android:textColor="#818CF8"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.25"
+            android:gravity="center"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- ✅ Tagline 2 — Fixed color + typo removed -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classic Board Game"
+            android:textColor="#9CA3AF"
+            android:textSize="13sp"
+            android:letterSpacing="0.1"
+            android:gravity="center"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Board grid decoration -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="#1E2433" android:layout_margin="2dp"/>
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="#2D3748" android:layout_margin="2dp"/>
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="#1E2433" android:layout_margin="2dp"/>
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="#2D3748" android:layout_margin="2dp"/>
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="#1E2433" android:layout_margin="2dp"/>
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="#2D3748" android:layout_margin="2dp"/>
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="#1E2433" android:layout_margin="2dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══ BOTTOM — Loading Lottie ══ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="64dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieLoading"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            app:lottie_rawRes="@raw/loading_dots"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- ✅ Loading text — visible color -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading game..."
+            android:textColor="#6B7280"
+            android:textSize="12sp"
+            android:letterSpacing="0.15"/>
+
+    </LinearLayout>
+
+    <!-- ══ Bottom glow ══ -->
+    <View
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/splash_glow_circle"
+        android:alpha="0.12"/>
+
+</RelativeLayout>

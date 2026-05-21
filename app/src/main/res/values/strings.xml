@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base App Theme -->
+
+    <string name="tagline">Snake and Ladder Game</string>
+
+        <string name="app_name">SapSidi</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="legal_title">Legal &amp; Privacy</string>
+    <string name="tab_privacy">Privacy Policy</string>
+    <string name="tab_terms">Terms of Use</string>
+    <string name="contact_email">codingsolution200@gmail.com</string>
+
+
+</resources>

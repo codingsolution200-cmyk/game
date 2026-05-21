@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A1E">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#12122E"
+        android:paddingTop="16dp"
+        android:paddingBottom="10dp"
+        android:paddingHorizontal="16dp"
+        android:elevation="6dp">
+
+        <TextView
+            android:id="@+id/tvOpponentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🟡 Opponent: P2"
+            android:textColor="#9CA3AF"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvCurrentPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎯 Your Turn!"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="4dp"/>
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:background="#6366F1"/>
+
+        <TextView
+            android:id="@+id/tvDiceResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Roll the dice!"
+            android:textColor="#F59E0B"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Game Board -->
+    <com.example.game.presentation.ui.game.BoardView
+        android:id="@+id/boardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"/>
+
+    <!-- Bottom Panel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#12122E"
+        android:paddingTop="8dp"
+        android:elevation="8dp">
+
+        <!-- Dice Face -->
+        <TextView
+            android:id="@+id/tvDiceFace"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@color/white"
+            android:text="⚀"
+            android:textSize="56sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Roll Button -->
+        <Button
+            android:id="@+id/btnRollDice"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🎲  ROLL DICE"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:backgroundTint="#6366F1"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            android:stateListAnimator="@null"
+            android:elevation="4dp"/>
+
+        <!-- ✅ Banner Ad -->
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "110335749150",
+    "firebase_url": "https://sapaaa-55bc4-default-rtdb.firebaseio.com",
+    "project_id": "sapaaa-55bc4",
+    "storage_bucket": "sapaaa-55bc4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110335749150:android:09707ed1fb5bab2d12d20f",
+        "android_client_info": {
+          "package_name": "com.example.game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0vkJAkh1Xr6j0CM5DwNgXZN8m-qYZvQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background Colors — Dark Galaxy Theme -->
+    <color name="bg_primary">#0A0A1A</color>
+    <color name="bg_secondary">#12122A</color>
+    <color name="bg_card">#1A1A35</color>
+    <color name="bg_surface">#22224A</color>
+
+    <!-- Purple Accent -->
+    <color name="purple_primary">#7C3AED</color>
+    <color name="purple_light">#A855F7</color>
+    <color name="purple_dark">#5B21B6</color>
+    <color name="purple_glow">#7C3AED40</color>
+    <color name="splash_bg">#0D1117</color>
+
+    <!-- Gold Accent -->
+    <color name="gold_primary">#F59E0B</color>
+    <color name="gold_light">#FCD34D</color>
+    <color name="gold_dark">#D97706</color>
+
+    <!-- Snake Red -->
+    <color name="snake_red">#EF4444</color>
+    <color name="snake_red_glow">#EF444440</color>
+
+    <!-- Ladder Green -->
+    <color name="ladder_green">#10B981</color>
+    <color name="ladder_green_glow">#10B98140</color>
+
+    <!-- Player Colors -->
+    <color name="player_1">#EF4444</color>
+    <color name="player_2">#3B82F6</color>
+    <color name="player_3">#10B981</color>
+    <color name="player_4">#F59E0B</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0CC</color>
+    <color name="text_hint">#6B6B8A</color>
+    <color name="text_gold">#F59E0B</color>
+
+
+
+        <color name="colorPrimary">#7C3AED</color>
+        <color name="colorPrimaryDark">#5B21B6</color>
+        <color name="colorAccent">#F59E0B</color>
+        <color name="colorBackground">#1A1A2E</color>
+        <color name="white">#FFFFFF</color>
+        <color name="black">#000000</color>
+
+    <!-- UI Colors -->
+    <color name="divider">#2A2A4A</color>
+    <color name="ripple">#7C3AED30</color>
+    <color name="overlay">#80000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Status Bar -->
+    <color name="status_bar">#0A0A1A</color>
+</resources>
