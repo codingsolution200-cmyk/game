@@ -17,6 +17,10 @@ class BannerAdController(
     private val adView: AdView,
     private val isAdsEnabled: () -> Boolean = { true }
 ) {
+    companion object {
+        private const val RETRY_DELAY_MS = 15_000L
+    }
+
     private val mainHandler = Handler(Looper.getMainLooper())
     private val connectivityManager =
         activity.getSystemService(ConnectivityManager::class.java)
@@ -24,6 +28,10 @@ class BannerAdController(
     private var isRegistered = false
     private var isLoading = false
     private var hasLoadedAd = false
+    private var isDestroyed = false
+    private val retryLoad = Runnable {
+        if (!isDestroyed) refresh()
+    }
 
     private val networkCallback = object : ConnectivityManager.NetworkCallback() {
         override fun onAvailable(network: Network) {
@@ -40,6 +48,7 @@ class BannerAdController(
     }
 
     fun start() {
+        isDestroyed = false
         registerNetworkCallback()
         adView.visibility = View.GONE
         adView.post { refresh() }
@@ -55,11 +64,15 @@ class BannerAdController(
     }
 
     fun destroy() {
+        isDestroyed = true
+        mainHandler.removeCallbacks(retryLoad)
         unregisterNetworkCallback()
         try { adView.destroy() } catch (_: Exception) {}
     }
 
     fun refresh() {
+        mainHandler.removeCallbacks(retryLoad)
+
         if (!isAdsEnabled() || !NetworkUtils.isAvailable(activity)) {
             isLoading = false
             hasLoadedAd = false
@@ -82,6 +95,7 @@ class BannerAdController(
                 isLoading = false
                 hasLoadedAd = false
                 adView.visibility = View.GONE
+                scheduleRetry()
             }
         }
 
@@ -91,6 +105,7 @@ class BannerAdController(
             isLoading = false
             hasLoadedAd = false
             adView.visibility = View.GONE
+            scheduleRetry()
         }
     }
 
@@ -120,9 +135,18 @@ class BannerAdController(
 
     private fun hideOnMain() {
         mainHandler.post {
+            mainHandler.removeCallbacks(retryLoad)
             isLoading = false
             hasLoadedAd = false
             adView.visibility = View.GONE
         }
+    }
+
+    private fun scheduleRetry() {
+        if (isDestroyed || isLoading || hasLoadedAd) return
+        if (!isAdsEnabled() || !NetworkUtils.isAvailable(activity)) return
+
+        mainHandler.removeCallbacks(retryLoad)
+        mainHandler.postDelayed(retryLoad, RETRY_DELAY_MS)
     }
 }

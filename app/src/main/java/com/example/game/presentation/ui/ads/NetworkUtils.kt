@@ -21,7 +21,8 @@ object NetworkUtils {
                 val hasTransport =
                     caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ||
                             caps.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) ||
-                            caps.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)
+                            caps.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) ||
+                            caps.hasTransport(NetworkCapabilities.TRANSPORT_VPN)
 
                 val hasInternetCapability =
                     caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
