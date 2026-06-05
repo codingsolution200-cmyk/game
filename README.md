@@ -21,16 +21,20 @@ It provides smooth gameplay, beautiful UI design, and multiple play modes for an
 ## 📱 Screenshots
 
 ### 🐍 Splash Screen
-![Splash Screen](ss1.jpeg)
+![Splash Screen] <img width="900" height="1600" alt="ss1" src="https://github.com/user-attachments/assets/3a22d11b-dbdb-4b21-89e2-ce2ac3c7989c" />
+
 
 ### 🏠 Home Screen
-![Home Screen](ss2.jpeg)
+![Home Screen] <img width="900" height="1600" alt="ss2" src="https://github.com/user-attachments/assets/44caf8a9-bb7a-4122-8585-6aa8b4639b04" />
+
 
 ### 🎮 Game Play
-![Game Play](ss3.jpeg)
+![Game Play] <img width="900" height="1600" alt="ss3" src="https://github.com/user-attachments/assets/56fc5eea-b6df-4c58-b971-4f265d47e975" />
+
 
 ### 🏆 Winner Screen
-![Winner Screen](ss4.jpeg)
+![Winner Screen] <img width="900" height="1600" alt="ss4" src="https://github.com/user-attachments/assets/086aa050-36a4-46cc-98cf-ad4af26b6fdd" />
+
 
 ---
 
@@ -45,19 +49,7 @@ It provides smooth gameplay, beautiful UI design, and multiple play modes for an
 ---
 
 ## 📂 Project Structure
-
-app/
-┣ src/
-┃ ┣ main/
-┃ ┃ ┣ java/com/sapsidi/game/
-┃ ┃ ┃ ┣ game/
-┃ ┃ ┃ ┣ computer/
-┃ ┃ ┃ ┣ ads/
-┃ ┃ ┣ res/
-┃ ┃ ┣ AndroidManifest.xml
-┣ build.gradle
-
-
+MVVM architecture
 ---
 
 ## 📦 Installation & Setup
